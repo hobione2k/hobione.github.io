@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ほびわん / hobione</title>
+  <style>
+    :root {
+      --card: rgba(255, 255, 255, 0.6);
+      --text: #2c5a7c;
+      --muted: #6593b3;
+      --accent: #4aa8d8;
+      --border: rgba(255, 255, 255, 0.7);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #8fd3ec 0%, #b3e3f2 45%, #e4f6fb 100%);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Segoe UI", sans-serif;
+      padding: 24px;
+    }
+
+    .profile {
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    .icon {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 52px;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #6fc5e6, #4aa8d8);
+      box-shadow: 0 10px 30px rgba(74, 168, 216, 0.3);
+      border: 3px solid rgba(255, 255, 255, 0.85);
+      overflow: hidden;
+    }
+
+    .icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.0);
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .handle {
+      color: var(--muted);
+      font-size: 15px;
+      margin: 4px 0 28px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--card);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(74, 168, 216, 0.15);
+      transition: border-color .15s ease, transform .15s ease, background .15s ease, box-shadow .15s ease;
+    }
+
+    .links a:hover {
+      border-color: var(--accent);
+      background: rgba(255, 255, 255, 0.85);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(74, 168, 216, 0.28);
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .mascot {
+      position: fixed;
+      right: 32px;
+      bottom: 32px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      z-index: 10;
+      filter: drop-shadow(0 6px 12px rgba(74, 168, 216, 0.3));
+      cursor: pointer;
+      transition: transform .15s ease;
+    }
+
+    .mascot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .mascot:hover {
+      transform: translateY(-4px) scale(1.05);
+    }
+
+    @media (max-width: 480px) {
+      .mascot {
+        width: 80px;
+        height: 80px;
+        right: 8px;
+        bottom: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="profile">
+    <div class="icon"><img src="images/Sinano600.png" alt="ほびわん"></div>
+
+    <h1 class="name">ほびわん</h1>
+    <p class="handle">hobione</p>
+    <p class="description">VRChatやclusterで遊んでます。<br>Unity/Blender/シェーダー/プログラミングも少々。</p>
+
+    <nav class="links">
+      <a href="https://x.com/hobi_ik" target="_blank" rel="noopener noreferrer">X</a>
+      <a href="https://vrchat.com/home/user/usr_7c93de58-2088-4f7a-88ca-017b296c7875" target="_blank" rel="noopener noreferrer">VRChat</a>
+      <a href="https://cluster.mu/u/hobione" target="_blank" rel="noopener noreferrer">cluster</a>
+      <a href="https://hobione.booth.pm/" target="_blank" rel="noopener noreferrer">BOOTH</a>
+      <a href="https://github.com/hobione2k" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://gist.github.com/hobione2k" target="_blank" rel="noopener noreferrer">Gist</a>
+    </nav>
+
+    <footer>&copy; ほびわん / hobione</footer>
+  </main>
+
+  <a class="mascot" href="https://booth.pm/ja/items/4184571" target="_blank" rel="noopener noreferrer">
+    <img src="images/Wanko.gif" alt="ましゅまろわんこ">
+  </a>
+</body>
+</html>
