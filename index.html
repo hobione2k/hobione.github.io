@@ -25,6 +25,27 @@
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Segoe UI", sans-serif;
       padding: 24px;
+      position: relative;
+    }
+
+    /* 画像レイヤー: 先に彩度を下げてブラーをかける */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background: url("images/IMG_20260418_111719S.jpg") center / cover no-repeat;
+      filter: grayscale(0.9) contrast(200%) blur(8px);
+      transform: scale(1.2);
+    }
+
+    /* 色レイヤー: その上から背景色のグラデーションを混合 */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(128, 221, 255, 0.7) 0%, rgba(179, 227, 242, 0.9) 50%, rgba(228, 246, 251, 1.0) 100%);
     }
 
     .profile {
